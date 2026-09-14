@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "liahona-ledger"
+version = "0.1.0"
+description = "Plan, generate, and search sacrament meeting agendas, programs, and announcements."
+authors = ["Ward Clerk"]
+readme = "README.md"
+packages = [{ include = "liahona_ledger" }]
+include = ["liahona_ledger/templates/*.docx"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1"
+python-docx = "^1.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0"
+
+[tool.poetry.scripts]
+liahona-ledger = "liahona_ledger.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.8.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,12 +1,30 @@
-__pycache__/
-*.pyc
-*.egg-info/
-build/
-dist/
-.venv/
-poetry.toml
-*.db
 liahona-ledger-output/
 **/~
-*.env
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Poetry / build
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment / secrets
+.env
+
+# macOS
 .DS_Store
+__MACOSX/
+
+# IDE
+.vscode/
+.idea/
+
+# Pytest
+.pytest_cache/
